@@ -10,8 +10,7 @@
 <%--<%@include file="idea16/test/clock.jsp" %>--%>
 <%--<%@include file="idea16/test/photo.jsp" %>--%>
 <%--<%@include file="idea16/test/photo1.jsp" %>--%>
-<%--<%@include file="idea16/test/time.jsp" %>--%>
-<%--<%@include file="idea16/test/top_link.jsp" %>--%>
+
 '${i}'
 </body>
 </html>
