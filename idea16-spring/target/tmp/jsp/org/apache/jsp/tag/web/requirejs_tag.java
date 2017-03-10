@@ -16,12 +16,48 @@ public final class requirejs_tag
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(5);
+    _jspx_dependants = new java.util.ArrayList<String>(41);
     _jspx_dependants.add("/WEB-INF/common/taglibs.jsp");
-    _jspx_dependants.add("/WEB-INF/common/include/css/test-nav-css.jsp");
-    _jspx_dependants.add("/WEB-INF/common/include/js/test-nav-js.jsp");
-    _jspx_dependants.add("/WEB-INF/common/include/jquery-min-js.jsp");
-    _jspx_dependants.add("/WEB-INF/common/include/js/test-clock-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery-ui-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/chosen-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/select2-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/datetimepicker-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jqgrid-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/ui.multiselect-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/fullcalendar-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/displaytag-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/ckeditor-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/dropzone-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.multiselect-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/bootstrap-editable-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/ui.tabs.paging-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/uploadify-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/dynatree-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/uploadify-browse-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jstree-css.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery-ui-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/chosen-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/select2-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/datetimepicker-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jqgrid-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/ui.multiselect-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/fullcalendar-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/displaytag-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/typeahead-bs2-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.populate-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.validate-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/bootstrap-tag-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/dropzone-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.multiselect-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/bootstrap-editable-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/ui.tabs.paging-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/uploadify-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.form-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/dynatree-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jquery.maskedinput-js.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/upload.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/boactions.jsp");
+    _jspx_dependants.add("/WEB-INF/common/include/jstree-js.jsp");
   }
 
   private JspContext jspContext;
@@ -129,46 +165,664 @@ public final class requirejs_tag
     //request.setAttribute("requires", requireList);
 
       out.write("\r\n");
+      out.write("<content tag=\"header.requires\">\r\n");
       out.write("\r\n");
- if (requireList.contains("nav")) { 
+      out.write("    ");
+ if (requireList.contains("jquery-ui")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/jquery-ui-1.10.3.custom.min.css\" rel=\"stylesheet\"/>\r\n");
       out.write('\r');
       out.write('\n');
+      out.write('\r');
+      out.write('\n');
+      out.write("\r\n");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/jquery-ui-1.10.3.full.min.css\" rel=\"stylesheet\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("chosen")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/chosen.css\" rel=\"stylesheet\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("select2")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/select2.css\" rel=\"stylesheet\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("datetimepicker")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/datepicker.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/bootstrap-timepicker.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/bootstrap-datetimepicker.min.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/daterangepicker.css\" rel=\"stylesheet\" type=\"text/css\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jqgrid")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/ui.jqgrid.css\" rel=\"stylesheet\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ui.multiselect")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link type=\"text/css\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/ui.multiselect.css\" rel=\"stylesheet\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("fullcalendar")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/fullcalendar.css\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("displaytag")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/displaytag/displaytag.css\"/>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("typeahead-bs2")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ckeditor")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/ckeditor/ckeditor.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("bootstrap-tag")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("dropzone")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/dropzone.css\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.multiselect")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link type=\"text/css\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jqueryui/extends/multiselect/jquery.multiselect.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("<link type=\"text/css\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jqueryui/extends/multiselect/jquery.multiselect.filter.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("bootstrap.editable")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/css/bootstrap-editable.css\" type=\"text/css\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ui.tabs.paging")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link type=\"text/css\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jqueryui/extends/tabs/ui.tabs.paging.css\" rel=\"stylesheet\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("uploadify")) { 
+      out.write("\r\n");
+      out.write("    ");
       out.write("<link href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
-      out.write("/style/test/nav.css\" rel=\"stylesheet\"/>\r\n");
-      out.write('\r');
-      out.write('\n');
-      out.write("<script src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
-      out.write("/script/test/nav.js\" type=\"text/javascript\"></script>\r\n");
-      out.write('\r');
-      out.write('\n');
+      out.write("/jquery/customize/uploadify/uploadify.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
 }
       out.write("\r\n");
       out.write("\r\n");
- if (requireList.contains("jquery")) { 
-      out.write('\r');
-      out.write('\n');
-      out.write("<script src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
-      out.write("/jquery/jquery.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write('\r');
-      out.write('\n');
+      out.write("    ");
+ if (requireList.contains("dynatree")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/utils/messenger/css/dynatree/skin-vista/ui.dynatree.css\" rel=\"stylesheet\" type=\"text/css\">\r\n");
+      out.write("\r\n");
+      out.write("    ");
 }
       out.write("\r\n");
       out.write("\r\n");
- if (requireList.contains("clock")) { 
-      out.write('\r');
-      out.write('\n');
-      out.write("<script src=\"");
+      out.write("    ");
+ if (requireList.contains("uploadify-browse")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<link href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
-      out.write("/script/test/clock.js\" type=\"text/javascript\"></script>\r\n");
-      out.write('\r');
-      out.write('\n');
+      out.write("/jquery/customize/uploadify/uploadify.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("<link href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/customize/uploadify/uploadify-browse.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jstree")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("<link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/utils/messenger/css/jstree/jstree.min.css\">\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("</content>\r\n");
+      out.write("\r\n");
+      out.write("<content tag=\"footer.requires\">\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery-ui")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery-ui-1.10.3.custom.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery-ui-1.10.3.full.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery.ui.touch-punch.min.js\" type=\"text/javascript\"></script>");
+      out.write("\r\n");
+      out.write("    ");
 }
       out.write("\r\n");
       out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("chosen")) { 
       out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/chosen.jquery.min.js\" type=\"text/javascript\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("select2")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/select2.min.js\" type=\"text/javascript\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("datetimepicker")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/date-time/moment.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/date-time/bootstrap-datepicker.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/date-time/bootstrap-timepicker.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/date-time/bootstrap-datetimepicker.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/date-time/daterangepicker.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jqgrid")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jqGrid/ui.multiselect.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jqGrid/jquery.jqGrid.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jqGrid/i18n/grid.locale-en.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write('\r');
+      out.write('\n');
+      out.write("\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/scripts/jqgrid-common.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/scripts/jqgrid-nav.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/scripts/jqgrid-format.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/scripts/jqgrid-misc.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/scripts/jqgrid-frozen-fixed.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ui.multiselect")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/ui.multiselect.js\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("fullcalendar")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/fullcalendar.min.js\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("displaytag")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("typeahead-bs2")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/typeahead-bs2.min.js\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ckeditor")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/ckeditor/ckeditor.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.populate")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/extends/jquery-populate/jquery.populate.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.validate")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery.validate.min.js\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery.metadata.min.js\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/extends/jquery-validation/1.11.1/additional-methods.min.js\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/scripts/wjxinfo.validate.js\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/scripts/message_cn.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("bootstrap-tag")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/bootstrap-tag.min.js\" type=\"text/javascript\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("dropzone")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/dropzone.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.multiselect")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jqueryui/extends/multiselect/jquery.multiselect.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("bootstrap.editable")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/x-editable/bootstrap-editable.min.js\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/x-editable/ace-editable.min.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("ui.tabs.paging")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jqueryui/extends/tabs/ui.tabs.paging.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script type=\"text/javascript\" src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/scripts/mis/tabs/tabs_extends.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("uploadify")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/customize/uploadify/jquery.uploadify.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.form")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/extends/form/jquery.form.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("dynatree")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/utils/messenger/js/jquery.dynatree.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jquery.maskedinput")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery.maskedinput.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ace3}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/assets/js/jquery.numeric.js\" type=\"text/javascript\"></script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("uploadify-browse")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/jquery/customize/uploadify/jquery.uploadify.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("upload")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctxstatic}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/common/ajaxfileupload.js\" type=\"text/javascript\"></script>\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("boactions")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("    var boactions = [];\r\n");
+      out.write("    $(document).ready(function () {\r\n");
+      out.write("\r\n");
+      out.write("        $.ajax({\r\n");
+      out.write("            type: \"POST\",\r\n");
+      out.write("            url: _appContext + \"/misc/boactions\",\r\n");
+      out.write("            dataType: \"json\",\r\n");
+      out.write("            contentType: \"application/json\",\r\n");
+      out.write("            async:false,\r\n");
+      out.write("            success: function (data) {\r\n");
+      out.write("                boactions = data;\r\n");
+      out.write("                // var result = isActionEnabled(\"IND_MEM_APPLICATION\", \"DRAFT\", \"EDIT\");\r\n");
+      out.write("                // alert(result);\r\n");
+      out.write("            }\r\n");
+      out.write("        });\r\n");
+      out.write("    });\r\n");
+      out.write("\r\n");
+      out.write("    function isActionEnabled(boType, boCurrentStatus, boAction) {\r\n");
+      out.write("        var result = false;\r\n");
+      out.write("        $.each(boactions, function (index, value) {\r\n");
+      out.write("            var _boType = value.boType.toUpperCase();\r\n");
+      out.write("            var _boStatus = value.boStatus.toUpperCase();\r\n");
+      out.write("            var _actionEnabled = value.boActionEnabled.toUpperCase();\r\n");
+      out.write("\r\n");
+      out.write("            if (boType.toUpperCase() === _boType && boCurrentStatus.toUpperCase() === _boStatus) {\r\n");
+      out.write("                if (_actionEnabled.indexOf(boAction.toUpperCase()) >= 0) {\r\n");
+      out.write("                    result = true;\r\n");
+      out.write("                    return false; // break out\r\n");
+      out.write("                }\r\n");
+      out.write("            }\r\n");
+      out.write("        });\r\n");
+      out.write("        return result;\r\n");
+      out.write("    }\r\n");
+      out.write("\r\n");
+      out.write("</script>");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("    ");
+ if (requireList.contains("jstree")) { 
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)this.getJspContext(), null));
+      out.write("/static/utils/messenger/js/jstree.min.js\"></script>\r\n");
+      out.write("\r\n");
+      out.write("    ");
+}
+      out.write("\r\n");
+      out.write("</content>");
     } catch( Throwable t ) {
       if( t instanceof SkipPageException )
           throw (SkipPageException) t;

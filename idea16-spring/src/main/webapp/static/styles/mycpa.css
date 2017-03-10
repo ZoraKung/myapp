@@ -1,0 +1,335 @@
+/* For MyCPA*/
+table.no-border tr td {
+    border: none;
+}
+
+table.no-border tr th {
+    border: none;
+    /*background: #dcdcdc;*/
+    color: #000000;
+}
+
+/* Top Nav Bar*/
+.ace-nav > li.light-blue > a {
+    /*background-color: #62a8d1;*/
+    /*background: #2f3338 url(../images/page-head-bg.gif) repeat;*/
+    background-color: #ffffff;
+}
+/*.ace-nav > li.light-blue > a .user-info{*/
+/*color: #9b9fa2;*/
+/*}*/
+.ace-nav > li > a > [class*="icon-"] {
+    color: #484c4f;
+}
+
+.main-content {
+    margin-left: 0px;
+    /*margin-right: 5px;*/
+}
+
+
+
+.mycpanav .nav-tabs li a {
+    color: #484c4f;
+}
+
+.mycpanav .nav-tabs li.active a {
+    /*color: red;*/
+    font-weight: bold;
+}
+
+.mycpanav .nav-tabs li {
+    min-width: 50px;
+    /*min-height: 55px;*/
+}
+
+.mycpanav .nav-tabs li > a {
+    /*min-height: 54px;*/
+}
+
+.mycpanav .nav-tabs li > a.active {
+    border-top: 2px solid #ff6029;
+    /*#bd321b;*/
+    margin-top: -1px;
+}
+
+.mycpanav div.tab-content {
+    min-width: 180px;
+    margin: 1px;
+    padding: 0px;
+    /*background: #2f3338;*/
+    /*background: #686868;*/
+    /*background: #2f3338 url(${ctx}/static/images/page-head-bg.gif) repeat;;*/
+    background: #2f3338 url(../images/page-head-bg.gif) repeat;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 2px 2px;
+    list-style: none;
+    /*min-height: 50px;*/
+}
+
+.mycpanav div.tab-content li {
+    border-left: 1px solid rgba(213, 213, 213, 0.20);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    /*border-bottom: 1px solid rgba(213, 213, 213, 0.20);*/
+    /*border-top: 1px solid rgba(0,0,0,0.2);*/
+
+    height: 35px;
+    /*padding: 10px 5px 0px;*/
+    /*margin-bottom: 2px;*/
+
+    position: relative;
+    -webkit-transition: background-color 0.2s ease, border 0.2s ease, height 0.3s ease, color 0.2s ease, opacity 0.5s ease;
+    transition: background-color 0.2s ease, border 0.2s ease, height 0.3s ease, color 0.2s ease, opacity 0.5s ease;
+}
+
+.mycpanav div.tab-content li:last-child {
+    border-right: 0;
+}
+
+.mycpanav div.tab-content li:first-child {
+    border-left: 0;
+}
+
+.mycpanav div.tab-content ul.submenu {
+    margin: 0px;
+}
+
+.mycpanav div.tab-content ul.submenu li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    margin-right: -2px;
+}
+
+.mycpanav div.tab-content ul.submenu li.active {
+    /*background-color: #2eafbb !important;*/
+    background-color: #bd321b !important;
+    color: #fff;
+}
+
+.mycpanav div.tab-content ul.submenu li.active a {
+    color: rgb(255, 255, 255);
+}
+
+.mycpanav div.tab-content ul.submenu li a {
+    display: block;
+    padding: 8px 5px;
+
+    text-decoration: none;
+    /*color: #646060;*/
+    /*color: rgb(168, 172, 175);*/
+    color: #9b9fa2;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.mycpanav div.tab-content .submenu li:hover {
+    /*background-color: #2eafbb !important;*/
+    background-color: #ff6029 !important;
+    color: #fff;
+}
+
+.mycpanav div.tab-content .submenu li:hover > a {
+    color: #fff;
+}
+
+
+.info-name {
+    background-color: rgb(237, 243, 244);
+    border-bottom: 1px dotted rgb(213, 228, 241);
+    /*padding-right: 20px;*/
+    /*box-sizing: border-box;*/
+}
+
+.info-value {
+    border-bottom: 1px dotted rgb(213, 228, 241);
+    /*padding-left: 20px;*/
+    /*box-sizing: border-box;*/
+}
+
+/* For MyCPA End*/
+
+label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+span label {
+    margin-right: 20px;
+}
+
+label.error {
+    float: none;
+    color: red;
+    padding-left: .5em;
+    vertical-align: top;
+}
+
+.required-field {
+    color: red;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    opacity: 1.0;
+    position: relative;
+    margin: -2px 5px;
+    /*margin-top: 1px;*/
+}
+
+/* HKICPA */
+.navbar,
+.skin-1 .navbar,
+.skin-2 .navbar,
+.skin-3 .navbar {
+    background: #ffffff;
+}
+
+.navbar-container,
+.navbar .navbar-container,
+.skin-1 .navbar .navbar-container,
+.skin-2 .navbar .navbar-container,
+.skin-3 .navbar .navbar-container {
+    background-color: #ffffff;
+    /*background: url(../images/logo-cpa.jpg) no-repeat top left;*/
+    background: url(../images/logo-hksi.jpg) no-repeat top left;    
+    /*background: url(../images/logo-40.jpg) no-repeat;*/
+    background-size: Auto 50px;
+    border-bottom: 4px solid #bd321b;
+    /*margin-bottom: 10px;*/
+    height: 50px;
+}
+
+.user-info {
+    /*height: 60px;*/
+    color: #000000;
+}
+
+/*.ace-nav>li {*/
+/*max-height: 55px;*/
+/*height: 55px;*/
+/*}*/
+
+/*.ace-nav > li.light-blue > a,*/
+.ace-nav > li.light-blue {
+    background: #ffffff;
+}
+
+/** jqGrid */
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    /*border-color: rgb(255, 255, 255);*/
+    /*background-color: rgb(209, 91, 71);*/
+    /*color: rgb(255, 255, 255);*/
+}
+
+.ui-jqgrid-sortable {
+    /*color: rgb(255, 255, 255);*/
+    font-weight: normal;
+}
+
+/*.ui-jqgrid-view > .ui-jqgrid-titlebar{*/
+/*border-color: rgb(255, 255, 255);*/
+/*background-color: #d0d0d0;*/
+/*color: rgb(31, 31, 31);*/
+/*}*/
+
+/** tabs */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active > a {
+    border-color: rgb(209, 91, 71);
+    background-color: rgb(209, 91, 71);
+    color: rgb(255, 255, 255);
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-default > a {
+    /*border-bottom: 1px solid rgb(197, 208, 220);*/
+    margin-bottom: 0px;
+}
+
+.table thead tr th {
+    /*border-color: rgb(255, 255, 255);*/
+    /*background-color: rgb(209, 91, 71);*/
+    /*color: rgb(255, 255, 255);*/
+    /*font-weight: normal;*/
+}
+
+/*.table thead tr th {*/
+/*border-color: rgb(255, 255, 255);*/
+/*background-color: #587898;*/
+/*color: rgb(255, 255, 255);*/
+/*}*/
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.alert {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    /*border-color: rgb(255, 255, 255);*/
+    /*background-color: rgb(209, 91, 71);*/
+    /*color: rgb(255, 255, 255);*/
+}
+
+.ui-jqgrid-sortable {
+    /*color: rgb(255, 255, 255);*/
+    font-weight: normal;
+}
+
+/*.ui-jqgrid-view > .ui-jqgrid-titlebar{*/
+/*border-color: rgb(255, 255, 255);*/
+/*background-color: #d0d0d0;*/
+/*color: rgb(31, 31, 31);*/
+/*}*/
+
+.page-toolbar {
+    margin-left: 15px;
+}
+
+/*.page-toolbar-fixed {*/
+    /*position: fixed;*/
+    /*z-index: 2000;*/
+    /*top: 0px;*/
+    /*width: 100%;*/
+    /*padding: 8px 15px;*/
+    /*background: #2f3338 url(../images/page-head-bg.gif) repeat;*/
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);*/
+    /*border-radius: 0 0 2px 2px;*/
+    /*list-style: none;*/
+/*}*/
+
+.page-toolbar-fixed {
+    position: fixed;
+    z-index: 2000;
+    top: 0px;
+    width: 50%;
+    right: 0px;
+    padding: 8px 15px;
+    background: #2f3338 url(../images/page-head-bg.gif) repeat;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 2px 2px;
+    list-style: none;
+}
+
+/*IE8*/
+.form-horizontal .control-label{
+	text-align: left !important;
+}
+
+.padding-left-6 {
+	padding-left: 6px;
+}
+
+.padding-left-7 {
+	padding-left: 7px;
+}
+
+.padding-left-8 {
+	padding-left: 8px;
+}
+
+
+

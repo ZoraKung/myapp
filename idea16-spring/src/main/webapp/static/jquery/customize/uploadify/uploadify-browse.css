@@ -1,0 +1,8 @@
+.uploadify-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+.uploadify:hover .uploadify-button {
+    background-color: transparent;
+}

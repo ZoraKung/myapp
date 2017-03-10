@@ -1,0 +1,26 @@
+/* css for timepicker */
+.ui-timepicker-select{ width: 100px !important; }
+
+/* ACE reset*/
+.ace-settings-container input[type="radio"], .ace-settings-container input[type="checkbox"] {
+    opacity: 0.0;
+    position: absolute;
+    margin: 0;
+}
+
+/* display tag*/
+.pagebanner{font-size:14px;float:left;width:40%;zoom:1;margin:0px;}
+.pagelinks{font-size:14px;float:right;width:60%;zoom:1;margin:0px;text-align:right;}
+
+/*iframe scrolling*/
+html { overflow-x: hidden; overflow-y: auto; }
+
+/*label after * */
+.required:after{content:"*";color:red; }
+
+/*datepicker*/
+.ui-datepicker{z-index: 9999 !important;}
+
+
+
+

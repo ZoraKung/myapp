@@ -1,0 +1,138 @@
+body {
+    color: #000;
+    font-family:Frutiger, Arial, MHei, '全真细黑',verdana, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    /*width: 1280px;*/
+    /*background: #FFFFFF;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+/*label color black*/
+label {
+    /*color: #000000;*/
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/*web style 5 row pink*/
+/*.ui-jqgrid-btable .ui-widget-content.ui-priority-secondary {*/
+    /*background-color: pink;*/
+/*}*/
+/*.ui-jqgrid-btable .ui-widget-content {*/
+    /*background-color: #FFF;*/
+/*}*/
+.ui-jqgrid .frozen-bdiv, .ui-jqgrid .frozen-div {
+    overflow: hidden;
+}
+
+/*jqgrid head background color red*/
+.ui-jqgrid .ui-jqgrid-labels {
+    border-bottom: 0;
+    /*color: white;*/
+    padding: 0 !important;
+}
+
+/*.ui-tabs .ui-tabs-nav li.ui-tabs-active > a {*/
+    /*border-color: #c41200;*/
+    /*background-color: #c41200;*/
+    /*color: white;*/
+/*}*/
+
+.ui-tabs .ui-tabs-nav li.ui-state-default > a {
+    margin-bottom: 0px;
+}
+
+/*jqgrid row head label white*/
+.ui-jqgrid-sortable {
+    /*color: #fff;*/
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+th[aria-selected="true"] {
+    /*background-image: linear-gradient(to bottom, #c41200 0px, #c41200 100%);*/
+    background-repeat: repeat-x;
+}
+
+.btn-primary {
+    /*color: #fff;*/
+    /*background-color: #abbac3;*/
+    /*border-color: #fff;*/
+    border-width: 1px;
+    border: solid transparent
+}
+button.btn-primary:active {
+    top: 1px;
+    left: 1px
+}
+/*.btn-primary, .btn-primary:focus {*/
+    /*background-color: #abbac3 !important;*/
+    /*border-color: #abbac3;*/
+/*}*/
+/*.btn-primary:hover, .open .btn-primary.dropdown-toggle {*/
+    /*background-color: #8b9aa3 !important;*/
+    /*border-color: #abbac3*/
+/*}*/
+
+/*btn-warning*/
+.btn-warning {
+    /*color: #fff;*/
+    /*background-color: #abbac3;*/
+    /*border-color: #fff;*/
+    border-width: 1px;
+    border: solid transparent
+}
+button.btn-warning:active {
+    top: 1px;
+    left: 1px
+}
+/*.btn-warning, .btn-warning:focus {*/
+    /*background-color: #abbac3 !important;*/
+    /*border-color: #abbac3;*/
+/*}*/
+/*.btn-warning:hover, .open .btn-warning.dropdown-toggle {*/
+    /*background-color: #8b9aa3 !important;*/
+    /*border-color: #abbac3*/
+/*}*/
+
+/*H1*/
+.page-header h1 {
+    /*color: #000;*/
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 0 8px;
+    padding: 0;
+}
+
+.page-header h1 small {
+    /*color: #000;*/
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 6px;
+}
+/*blue*/
+/*.blue {*/
+    /*color: #000 !important;*/
+/*}*/
+
+/*logo picture*/
+.navbar-container,
+.navbar .navbar-container,
+.skin-1 .navbar .navbar-container,
+.skin-2 .navbar .navbar-container,
+.skin-3 .navbar .navbar-container {
+    /*background-color: #ffffff;*/
+    /*background: url(../images/logo.png) no-repeat top left transparent;*/
+    /*background-size: Auto 48px;*/
+    /*border-bottom: 4px solid #c41200;*/
+    /*border-bottom: 2px solid #438eb9;*/
+    /*height: 48px;*/
+}
+
+/*.ui-jqgrid-view > .ui-jqgrid-titlebar{*/
+		  /*background: rgb(196,18,0);*/
+/*}*/
+
+

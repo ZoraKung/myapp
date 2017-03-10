@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="${ctxstatic}/displaytag/displaytag.css"/>

@@ -1,0 +1,41 @@
+/*Login Form*/
+
+.login-container {
+    width: 475px;
+    margin: 0 auto
+}
+
+.required-indicator {
+    color: coral;
+}
+
+.login-box .toolbar > div.left {
+    width: 35%;
+    display: inline-block;
+    padding: 9px 0 11px
+}
+
+.login-box .toolbar > div.middle {
+    width: 45%;
+    display: inline-block;
+    padding: 9px 0 11px
+}
+
+.login-box .toolbar > div.right {
+    width: 20%;
+    display: inline-block;
+    padding: 9px 0 11px
+}
+
+div.form-group {
+    margin: 2px;
+}
+
+span.login-error {
+    font: small;
+    color: #ff0000;
+}
+
+label.error{
+    color: #ff0000;
+}

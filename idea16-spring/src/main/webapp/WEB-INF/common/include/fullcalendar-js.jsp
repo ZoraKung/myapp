@@ -1,0 +1,1 @@
+<script src="${ace3}/assets/js/fullcalendar.min.js"></script>

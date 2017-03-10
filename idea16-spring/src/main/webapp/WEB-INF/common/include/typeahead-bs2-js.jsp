@@ -1,0 +1,1 @@
+<script src="${ace3}/assets/js/typeahead-bs2.min.js"></script>

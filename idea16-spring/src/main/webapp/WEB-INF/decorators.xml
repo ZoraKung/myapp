@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/static/*</pattern>
+        <pattern>/theme/*</pattern>
+        <pattern>/images/*</pattern>
+        <pattern>/styles/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/tags/*</pattern>
+        <!--<pattern>/report</pattern>-->
+        <!--<pattern>/report/html</pattern>-->
+        <!--<pattern>/admin/user/selectUser*</pattern>-->
+        <!--<pattern>/admin/user/searchUser*</pattern>-->
+        <!--<pattern>/admin/role/selectRole*</pattern>-->
+        <!--<pattern>/admin/role/searchRole*</pattern>-->
+        <!--<pattern>/home/taskForm*</pattern>-->
+    </excludes>
+
+    <decorator name="error" page="error.jsp">
+        <pattern>/error/*</pattern>
+    </decorator>
+
+    <decorator name="login" page="login.jsp">
+        <pattern>/login</pattern>
+        <pattern>/login/*</pattern>
+        <pattern>/servlet/event/*</pattern>
+    </decorator>
+
+    <decorator name="ajax" page="clean.jsp">
+        <pattern>*/ajax/*</pattern>
+        <pattern>*/remote/*</pattern>
+    </decorator>
+
+    <decorator name="mobile" page="mobile.jsp">
+        <pattern>/m</pattern>
+        <pattern>/m/*</pattern>
+    </decorator>
+
+    <decorator name="nip" page="nip.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+    <!--
+	<decorator name="default" page="layouts/default.jsp">
+		<pattern>/</pattern>
+	</decorator>
+	-->
+</decorators>

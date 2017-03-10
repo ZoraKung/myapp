@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>JSTL 1.1 functions library</description>
+    <display-name>JSTL functions sys</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>fns</short-name>
+    <uri>http://java.sun.com/jsp/jstl/functionss</uri>
+
+    <!-- UserUtils -->
+    <function>
+        <description>Get Current User</description>
+        <name>getUser</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>com.wjxinfo.core.auth.model.User getUser()</function-signature>
+        <example>${fns:getUser()}</example>
+    </function>
+    <function>
+        <description>Get Current User Name</description>
+        <name>getCurrentUserName</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>java.lang.String getCurrentUserName()</function-signature>
+        <example>${fns:getCurrentUserName()}</example>
+    </function>
+    <function>
+        <name>getAllUsers</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>java.util.List getAllUsers()</function-signature>
+        <example>${fns:getAllUsers()}</example>
+    </function>
+    <function>
+        <description>Get Current User Menu List</description>
+        <name>getMenuList</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>java.util.List getMasMenuList()</function-signature>
+        <example>${fns:getMenuList()}</example>
+    </function>
+    <!-- 2014-05-07 WTH -->
+    <function>
+        <description>Get Current User MAS Menu List</description>
+        <name>getMasMenuList</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>java.util.List getMasMenuList()</function-signature>
+        <example>${fns:getMasMenuList()}</example>
+    </function>
+
+    <function>
+        <name>getShortcut</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.UserUtils</function-class>
+        <function-signature>com.wjxinfo.core.auth.model.Menu getShortCutMenu(java.lang.String)</function-signature>
+        <example>${fns:getShortCutMenu(shortCut)}</example>
+    </function>
+
+
+    <!-- ParameterUtils -->
+    <function>
+        <description>Get Parameter Category</description>
+        <name>getParameterCategoryList</name>
+        <function-class>com.wjxinfo.core.auth.utils.cache.ParameterUtils</function-class>
+        <function-signature>java.util.List getCategoryList()</function-signature>
+        <example>${fns:getParameterCategoryList()}</example>
+    </function>
+
+    <!-- Encodes -->
+    <function>
+        <description>URL encode</description>
+        <name>urlEncode</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String urlEncode(java.lang.String)</function-signature>
+        <example>${fns:urlEncode(part)}</example>
+    </function>
+    <function>
+        <description>URL decode</description>
+        <name>urlDecode</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String urlDecode(java.lang.String)</function-signature>
+        <example>${fns:urlDecode(part)}</example>
+    </function>
+    <function>
+        <description>HTML encode</description>
+        <name>escapeHtml</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String escapeHtml(java.lang.String)</function-signature>
+        <example>${fns:escapeHtml(html)}</example>
+    </function>
+    <function>
+        <description>HTML decode</description>
+        <name>unescapeHtml</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String unescapeHtml(java.lang.String)</function-signature>
+        <example>${fns:unescapeHtml(html)}</example>
+    </function>
+    <function>
+        <description>Javascript encode</description>
+        <name>escapeScript</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String escapeScript(java.lang.String)</function-signature>
+        <example>${fns:escapeScript(html)}</example>
+    </function>
+    <function>
+        <description>HTML decode</description>
+        <name>unescapeScript</name>
+        <function-class>com.wjxinfo.core.base.utils.EncodeUtils</function-class>
+        <function-signature>java.lang.String unescapeScript(java.lang.String)</function-signature>
+        <example>${fns:unescapeScript(html)}</example>
+    </function>
+
+    <!-- StringUtils -->
+    <function>
+        <description>Cut String From Back</description>
+        <name>substringAfterLast</name>
+        <function-class>org.apache.commons.lang3.StringUtils</function-class>
+        <function-signature>java.lang.String substringAfterLast(java.lang.String, java.lang.String)</function-signature>
+        <example>${fns:substringAfterLast(str,separator)}</example>
+    </function>
+    <!-- StringUtils -->
+    <function>
+        <description>Cut String From Front</description>
+        <name>substringBeforeLast</name>
+        <function-class>org.apache.commons.lang3.StringUtils</function-class>
+        <function-signature>java.lang.String substringBeforeLast(java.lang.String, java.lang.String)
+        </function-signature>
+        <example>${fns:substringBeforeLast(str,separator)}</example>
+    </function>
+    <function>
+        <description>Abbreviate String</description>
+        <name>abbreviate</name>
+        <function-class>org.apache.commons.lang3.StringUtils</function-class>
+        <function-signature>java.lang.String abbreviate(java.lang.String, int)</function-signature>
+        <example>${fns:abbreviate(str,maxWidth)}</example>
+    </function>
+    <function>
+        <description>Replace HTML tag</description>
+        <name>replaceHtml</name>
+        <function-class>com.wjxinfo.core.base.utils.StringUtils</function-class>
+        <function-signature>java.lang.String replaceHtml(java.lang.String)</function-signature>
+        <example>${fns:replaceHtml(html)}</example>
+    </function>
+    <function>
+        <description>capitalizeForSentence</description>
+        <name>capitalizeForSentence</name>
+        <function-class>com.wjxinfo.core.base.utils.StringUtils</function-class>
+        <function-signature>java.lang.String capitalizeForSentence(java.lang.String)</function-signature>
+        <example>${fns:capitalizeForSentence(html)}</example>
+    </function>
+
+    <!-- DateUtils -->
+    <function>
+        <description>Get Current Date</description>
+        <name>getDate</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.lang.String getDate(java.lang.String)</function-signature>
+        <example>${fns:getDate(pattern)}</example>
+    </function>
+    <function>
+        <description>Get Date</description>
+        <name>format</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.util.Date format(java.lang.String)</function-signature>
+        <example>${fns:format(string)}</example>
+    </function>
+    <function>
+        <description>Get Date No Time</description>
+        <name>formatNoTime</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.util.Date formatNoTime(java.lang.String)</function-signature>
+        <example>${fns:formatNoTime(string)}</example>
+    </function>
+    <function>
+        <description>Get Date With HH:mm</description>
+        <name>formatWithHHmm</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.util.Date formatWithHHmm(java.lang.String)</function-signature>
+        <example>${fns:formatWithHHmm(string)}</example>
+    </function>
+    <function>
+        <description>Format Date With Pattern</description>
+        <name>formatDate</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.lang.String format(java.util.Date,java.lang.String)</function-signature>
+        <example>${fns:formatDate(date, string)}</example>
+    </function>
+    <function>
+        <description>Get two date different string</description>
+        <name>getDiffYMDString</name>
+        <function-class>com.wjxinfo.core.base.utils.DateUtils</function-class>
+        <function-signature>java.lang.String getDiffYMDString(java.lang.String,java.lang.String)</function-signature>
+        <example>${fns:getDiffYMDString(string, string)}</example>
+    </function>
+
+    <!-- Process Engine Utils -->
+    <function>
+        <description>Is Process Task Available</description>
+        <name>isTaskAvailable</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>boolean isTaskAvailable(java.lang.String, java.lang.String, java.lang.String)
+        </function-signature>
+        <example>${fns:isTaskAvailable(ProcessKey, TaskKey, BusinessId)}</example>
+    </function>
+
+    <function>
+        <description>Get Process Task Assignee</description>
+        <name>getTaskAssignee</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>java.util.List getTaskAssignee(java.lang.String,java.lang.String)</function-signature>
+        <example>${fns:getTaskAssignee(ProcessKey, TaskKey)}</example>
+    </function>
+
+    <function>
+        <description>Is Process Task Available With Sub Key</description>
+        <name>isTaskAvailableWithSubKey</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>boolean
+            isTaskAvailableWithSubKey(java.lang.String,java.lang.String,java.lang.String,java.lang.String))
+        </function-signature>
+        <example>${fns:isTaskAvailableWithSubKey(ProcessKey, TaskKey, BusinessId, subProcessKey)}</example>
+    </function>
+
+    <function>
+        <description>Get Process Task Assignee With Sub Key</description>
+        <name>getTaskAssigneeWithSubKey</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>java.util.List
+            getTaskAssigneeWithSubKey(java.lang.String,java.lang.String,java.lang.String))
+        </function-signature>
+        <example>${fns:getTaskAssigneeWithSubKey(ProcessKey, TaskKey, subProcessKey)}</example>
+    </function>
+
+    <function>
+        <description>Get Process Next Task Approval List</description>
+        <name>getNextTaskApprovalList</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>java.util.List
+            getNextTaskApprovalList(java.lang.String,java.lang.String))
+        </function-signature>
+        <example>${fns:getNextTaskApprovalList(ProcessKey, TaskKey)}</example>
+    </function>
+
+    <function>
+        <description>Get Process Next Task Approval List With Sub Key</description>
+        <name>getNextTaskApprovalListWithSubKey</name>
+        <function-class>com.wjxinfo.common.workflow.utils.ProcessEngineUtils</function-class>
+        <function-signature>java.util.List
+            getNextTaskApprovalListWithSubKey(java.lang.String,java.lang.String,java.lang.String))
+        </function-signature>
+        <example>${fns:getNextTaskApprovalListWithSubKey(ProcessKey, TaskKey, subProcessKey)}</example>
+    </function>
+
+    <function>
+        <description>Is BO Action Enabled</description>
+        <name>isActionEnabled</name>
+        <function-class>com.wjxinfo.common.workflow.utils.BusinessActionUtils</function-class>
+        <function-signature>boolean isActionEnabled(java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+        <example>${fns:isActionEnabled(BoType, BoAction, BoCurrentStatus)}</example>
+    </function>
+
+</taglib>
