@@ -12,7 +12,6 @@
 <%--<%@include file="idea16/test/photo1.jsp" %>--%>
 <%--<%@include file="idea16/test/time.jsp" %>--%>
 <%--<%@include file="idea16/test/top_link.jsp" %>--%>
-<%--<%@include file="idea16/test/photo-overturn.jsp" %>--%>
 '${i}'
 </body>
 </html>
