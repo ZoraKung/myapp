@@ -36,7 +36,7 @@
         <pattern>/m/*</pattern>
     </decorator>
 
-    <decorator name="nip" page="nip.jsp">
+    <decorator name="test" page="nip.jsp">
         <pattern>/*</pattern>
     </decorator>
 

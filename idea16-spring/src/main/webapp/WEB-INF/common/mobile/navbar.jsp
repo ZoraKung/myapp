@@ -27,7 +27,7 @@
                     <img src="${ctx}/static/images/logo.png" height="29" width="47">
                     <%--<i class="icon-leaf"></i>--%>
                     <%--<g:message code="app.name" default="Matrix Apps"/>--%>
-                    设计院推广管理系统(M)
+                    MyApp(M)
                 </small>
                 <%--<span class="badge">1.1.3</span>--%>
             </a><!-- /.brand -->

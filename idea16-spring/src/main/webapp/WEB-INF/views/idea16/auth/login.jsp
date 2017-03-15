@@ -18,7 +18,7 @@
         <div id="login-box" class="login-box visible widget-box no-border">
             <div class="widget-body">
                 <div class="widget-main">
-                    <h1>设计院推广管理系统</h1>
+                    <h1>MyApp</h1>
                     <h4 class="header blue">
                         <i class="fa fa-key green"></i>
                         登录系统

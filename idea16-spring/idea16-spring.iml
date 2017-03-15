@@ -17,10 +17,11 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/cache/applicationContext-ehcache.xml</file>
         </fileset>
+        <fileset id="web application context" profiles="development" autodetected="true" />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -48,7 +49,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.1.7.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.12" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.5" level="project" />
@@ -110,5 +111,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.6.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: cglib:cglib:2.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: asm:asm:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.dozer:dozer:5.5.1" level="project" />
   </component>
 </module>

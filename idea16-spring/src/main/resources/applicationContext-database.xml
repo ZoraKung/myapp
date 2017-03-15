@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/data/jpa
+		http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd">
+
+    <!--<context:property-placeholder location="classpath:system.properties"/>-->
+    <context:annotation-config/>
+
+    <jpa:repositories base-package="com.demo.idea16" transaction-manager-ref="transactionManager"
+                      entity-manager-factory-ref="emf"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="emf"/>
+    </bean>
+
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
+    <context:component-scan base-package="com.wjxinfo,com.demo.idea16"/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+
+        <property name="persistenceProviderClass" value="org.hibernate.jpa.HibernatePersistenceProvider"/>
+
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>com.demo.idea16</value>
+            </list>
+
+        </property>
+        <property name="jpaProperties">
+            <props>
+
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+                <prop key="net.sf.ehcache.configurationResourceName">cache/ehcache-hibernate-local.xml</prop>
+
+                <prop key="hibernate.dialect">com.wjxinfo.core.base.utils.dialect.SQLServer2014Dialect</prop>
+                <prop key="hibernate.physical_naming_strategy">
+                    org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+                </prop>
+                <!--<prop key="hibernate.implicit_naming_strategy">org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl</prop>-->
+                <!--<prop key="hibernate.physical_naming_strategy">org.hksi.shared.base.utils.ImprovedNamingStrategy</prop>-->
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <!-- 2nd level Cache Settings
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+ 				<prop key="hibernate.cache.use_query_cache">true</prop>
+     			<prop key="javax.persistence.sharedCache.mode">ENABLE_SELECTIVE</prop>          
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</prop>  
+               -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- MyBatis -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- Mapper path -->
+        <!--<property name="mapperLocations" value="classpath:/mybatis/**/*Mapper.xml"/>-->
+    </bean>
+
+    <!-- Scan @MyBatisRepository interface-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.wjxinfo,com.demo.idea16"/>
+        <property name="annotationClass" value="com.wjxinfo.core.base.utils.mybatis.MyBatisRepository"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!-- JSR303 Validator -->
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="validationMessageSource" ref="validationMessage"/>
+    </bean>
+
+    <bean id="validationMessage" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>i18n.ValidationMessageResource</value>
+            </list>
+        </property>
+    </bean>
+
+    <aop:aspectj-autoproxy/>
+
+    <aop:config>
+        <aop:advisor id="managerTx0" advice-ref="txAdvice" pointcut="execution(* *..service.*Manager.*(..))" order="0"/>
+    </aop:config>
+
+    <aop:config proxy-target-class="true">
+        <aop:advisor id="managerTx1" advice-ref="txAdvice"
+                     pointcut="execution(* *..service.GenericDataImportProvider.*(..))" order="1"/>
+    </aop:config>
+
+    <!-- Aop transaction-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="modifyNewTx" propagation="REQUIRES_NEW"/>
+            <tx:method name="selectByPKNewTx" propagation="REQUIRES_NEW" read-only="true"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="do*" propagation="REQUIRED"/>
+            <tx:method name="handle*" propagation="REQUIRED"/>
+            <tx:method name="create*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="edit*" propagation="REQUIRED"/>
+            <tx:method name="register*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="send*" propagation="REQUIRED"/>
+            <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="load*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="search*" propagation="REQUIRED" read-only="true"/>
+
+            <!-- Number Generation -->
+            <tx:method name="findNextNumber*" propagation="REQUIRES_NEW"/>
+
+            <tx:method name="*" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+</beans>

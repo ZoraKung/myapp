@@ -15,7 +15,7 @@
                     <img src="${ctx}/static/images/logo.png" height="29" width="47" >
                 <%--<i class="icon-leaf"></i>--%>
                 <%--<g:message code="app.name" default="Matrix Apps"/>--%>
-                    设计院推广管理系统
+                    MyApp
                 </small>
                 <span class="badge">1.1.3</span>
             </a><!-- /.brand -->
@@ -24,7 +24,7 @@
 
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                <%@include file="/WEB-INF/common/mis/nav-user.jsp" %>
+                <%--idea16test<%@include file="/WEB-INF/common/mis/nav-user.jsp" %>--%>
 
             </ul>
             <!-- /.ace-nav -->

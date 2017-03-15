@@ -49,15 +49,6 @@
 </c:if>
 
 <ul class="nav nav-list">
-    <%--<shiro:hasPermission name="home:view">--%>
-    <%--<li class="<c:if test="${currentMenuId eq 'home'}">active</c:if>">--%>
-        <%--<a href="<c:url value='/home/'/>">--%>
-            <%--<i class="icon-dashboard"></i>--%>
-            <%--<span class="menu-text"> Dashboard </span>--%>
-        <%--</a>--%>
-    <%--</li>--%>
-    <%--</shiro:hasPermission>--%>
-
     <c:forEach items="${fns:getMasMenuList()}" var="firstMenu">
         <c:if test="${firstMenu.parent.id == null && not empty firstMenu.privilegeIdentifier}">
             <shiro:hasPermission name="${firstMenu.privilegeIdentifier}">

@@ -130,16 +130,14 @@ public final class requirejs_tag
         return;
       out.write('\r');
       out.write('\n');
-      out.write('\r');
-      out.write('\n');
       if (_jspx_meth_c_set_1(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("\r\n");
-      if (_jspx_meth_c_set_2(_jspx_page_context))
-        return;
       out.write('\r');
       out.write('\n');
+      if (_jspx_meth_c_set_2(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
       if (_jspx_meth_c_set_3(_jspx_page_context))
         return;
       out.write('\r');
@@ -153,6 +151,10 @@ public final class requirejs_tag
       out.write('\r');
       out.write('\n');
       if (_jspx_meth_c_set_6(_jspx_page_context))
+        return;
+      out.write('\r');
+      out.write('\n');
+      if (_jspx_meth_c_set_7(_jspx_page_context))
         return;
       out.write('\r');
       out.write('\n');
@@ -864,8 +866,8 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_1 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_1.setPageContext(_jspx_page_context);
     _jspx_th_c_set_1.setParent(null);
-    _jspx_th_c_set_1.setVar("ctxstatic");
-    _jspx_th_c_set_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}/static", java.lang.Object.class, (PageContext)this.getJspContext(), null));
+    _jspx_th_c_set_1.setVar("ace3");
+    _jspx_th_c_set_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}/static/theme/ace3", java.lang.Object.class, (PageContext)this.getJspContext(), null));
     int _jspx_eval_c_set_1 = _jspx_th_c_set_1.doStartTag();
     if (_jspx_th_c_set_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_1);
@@ -882,8 +884,8 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_2 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_2.setPageContext(_jspx_page_context);
     _jspx_th_c_set_2.setParent(null);
-    _jspx_th_c_set_2.setVar("dateFormat");
-    _jspx_th_c_set_2.setValue(new String("dd-MM-yyyy"));
+    _jspx_th_c_set_2.setVar("ctxstatic");
+    _jspx_th_c_set_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}/static", java.lang.Object.class, (PageContext)this.getJspContext(), null));
     int _jspx_eval_c_set_2 = _jspx_th_c_set_2.doStartTag();
     if (_jspx_th_c_set_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_2);
@@ -900,8 +902,8 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_3 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_3.setPageContext(_jspx_page_context);
     _jspx_th_c_set_3.setParent(null);
-    _jspx_th_c_set_3.setVar("dateTimeFormat");
-    _jspx_th_c_set_3.setValue(new String("dd-MM-yyyy HH:mm"));
+    _jspx_th_c_set_3.setVar("dateFormat");
+    _jspx_th_c_set_3.setValue(new String("dd-MM-yyyy"));
     int _jspx_eval_c_set_3 = _jspx_th_c_set_3.doStartTag();
     if (_jspx_th_c_set_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_3);
@@ -918,8 +920,8 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_4 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_4.setPageContext(_jspx_page_context);
     _jspx_th_c_set_4.setParent(null);
-    _jspx_th_c_set_4.setVar("timeFormat");
-    _jspx_th_c_set_4.setValue(new String("HH:mm"));
+    _jspx_th_c_set_4.setVar("dateTimeFormat");
+    _jspx_th_c_set_4.setValue(new String("dd-MM-yyyy HH:mm"));
     int _jspx_eval_c_set_4 = _jspx_th_c_set_4.doStartTag();
     if (_jspx_th_c_set_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_4);
@@ -936,8 +938,8 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_5 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_5.setPageContext(_jspx_page_context);
     _jspx_th_c_set_5.setParent(null);
-    _jspx_th_c_set_5.setVar("moneyFormat");
-    _jspx_th_c_set_5.setValue(new String("HK$0.00"));
+    _jspx_th_c_set_5.setVar("timeFormat");
+    _jspx_th_c_set_5.setValue(new String("HH:mm"));
     int _jspx_eval_c_set_5 = _jspx_th_c_set_5.doStartTag();
     if (_jspx_th_c_set_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_5);
@@ -954,14 +956,32 @@ public final class requirejs_tag
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_6 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     _jspx_th_c_set_6.setPageContext(_jspx_page_context);
     _jspx_th_c_set_6.setParent(null);
-    _jspx_th_c_set_6.setVar("percentFormat");
-    _jspx_th_c_set_6.setValue(new String("0.00%"));
+    _jspx_th_c_set_6.setVar("moneyFormat");
+    _jspx_th_c_set_6.setValue(new String("HK$0.00"));
     int _jspx_eval_c_set_6 = _jspx_th_c_set_6.doStartTag();
     if (_jspx_th_c_set_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_6);
       throw new SkipPageException();
     }
     _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_6);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_set_7(PageContext _jspx_page_context)
+          throws Throwable {
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_7 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    _jspx_th_c_set_7.setPageContext(_jspx_page_context);
+    _jspx_th_c_set_7.setParent(null);
+    _jspx_th_c_set_7.setVar("percentFormat");
+    _jspx_th_c_set_7.setValue(new String("0.00%"));
+    int _jspx_eval_c_set_7 = _jspx_th_c_set_7.doStartTag();
+    if (_jspx_th_c_set_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_7);
+      throw new SkipPageException();
+    }
+    _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_7);
     return false;
   }
 }

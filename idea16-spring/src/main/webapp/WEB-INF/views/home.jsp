@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/common/taglibs.jsp" %>
 <html>
 <head>
-    <tags:requirejs id="jquery,nav,clock"/>
+    <tags:requirejs id="jquery-ui"></tags:requirejs>
     <title>首页</title>
 </head>
 <body>
@@ -10,9 +10,11 @@
 <%--<%@include file="idea16/test/clock.jsp" %>--%>
 <%--<%@include file="idea16/test/photo.jsp" %>--%>
 <%--<%@include file="idea16/test/photo1.jsp" %>--%>
-<%--<%@include file="idea16/test/time.jsp" %>--%>
+<%@include file="idea16/test/test.jsp" %>
 
 '${i}'
 </body>
 </html>
-<%--<%@include file="idea16/test/_action.jsp" %>--%>
+<content tag="footer.script">
+    <%@include file="idea16/test/_action.jsp" %>
+</content>

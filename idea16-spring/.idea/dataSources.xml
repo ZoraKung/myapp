@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="SQL Server - @localhost" uuid="c545f824-e91b-419d-86d5-0fb3356faa36">
+      <driver-ref>4b573e03-921c-4694-ba90-add50ab246b8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://localhost:1433;databaseName=testone</jdbc-url>
+    </data-source>
+  </component>
+</project>

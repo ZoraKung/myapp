@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title><decorator:title/> - 设计院推广管理系统</title>
+    <title><decorator:title/> - MyApp</title>
     <%@include file="/WEB-INF/common/mis/head.jsp" %>
     <%@include file="/WEB-INF/common/mis/cookie.jsp" %>
     <decorator:head/>
