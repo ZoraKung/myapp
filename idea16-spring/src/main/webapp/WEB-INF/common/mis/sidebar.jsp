@@ -6,11 +6,11 @@
         }
     </script>
 
-    <%--idea16test<%@include file="/WEB-INF/common/mis/sider-shortcuts.jsp" %>--%>
+    <%@include file="/WEB-INF/common/mis/sider-shortcuts.jsp" %>
     <!-- #sidebar-shortcuts -->
 
     <%--<ul class="nav nav-list">--%>
-    <%--idea16test<%@include file="/WEB-INF/common/mis/menu.jsp" %>--%>
+    <%@include file="/WEB-INF/common/mis/menu.jsp" %>
     <%--</ul><!-- /.nav-list -->--%>
 
     <div class="sidebar-collapse" id="sidebar-collapse">

@@ -1,6 +1,6 @@
 package com.wjxinfo.core.base.web.utils;
 
-import com.wjxinfo.core.base.utils.SpringContextHolder;
+import com.wjxinfo.core.base.utils.common.SpringContextHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wjxinfo.core.base.dao.DatabaseUtilsMapper">
+
+	<resultMap type="com.wjxinfo.core.base.vo.LabelValue" id="LabelValueResultMap">
+		<result column="label" jdbcType="VARCHAR" property="label" />
+		<result column="value" jdbcType="VARCHAR" property="value" />
+	</resultMap>
+	
+	<!-- Dynamic SQL : Execute SQL Directly  -->
+	<!-- select xxx as Label, xxx as Value from tabel_xxx where xxx = xxxx -->
+	<select id="selectLabelValues" parameterType="map" resultMap="LabelValueResultMap">
+       ${directSql}
+ 	</select>
+ 	
+ 	<!-- select count(*) from table_xxx where xxx = xxx -->
+	<select id="count" parameterType="map" resultType="java.lang.Long">
+       ${directSql}
+ 	</select>
+ 	<!-- 
+ 		update table set col_xxx = value_xxx where ....
+ 		delete table where ....
+ 		insert into table(xxxx, xxxx, ...) values ( xxx, xxxx, ....)
+ 	 -->
+ 	 <!--  resultType="java.lang.Integer" : N/A -->
+	<insert id="insert" parameterType="map">
+       ${directSql}
+ 	</insert>
+	<update id="update" parameterType="map">
+       ${directSql}
+ 	</update>
+	<delete id="delete" parameterType="map">
+       ${directSql}
+ 	</delete>
+	
+	<!-- Oracle Stored Procedure -->
+	<!-- 
+	<update id="getLabelValuesByOracleSp" parameterType="map" statementType="CALLABLE">
+		{call UTL.p_get_labelvalue(
+		#{results,mode=OUT,jdbcType=CURSOR,javaType=java.sql.ResultSet,resultMap=LabelValueResultMap}
+		, #{id,jdbcType=VARCHAR}
+		, #{lang,jdbcType=VARCHAR}
+		, #{userid,jdbcType=INTEGER}
+		, #{parent,jdbcType=VARCHAR}
+		)}
+	</update>
+	-->
+	
+	<!-- No need!  instead of JPA -->
+	<!-- 
+	<insert id="insertSystemEventByOracle" parameterType="matrix.core.system.model.SystemEvent">
+		<selectKey resultType="Integer" keyProperty="id" order="BEFORE">
+			SELECT seq_core.nextval FROM dual
+		</selectKey>
+		insert into SYS_EVEN (ID, EVENT_TYPE, EVENT_DESC,
+		CREATION_BY)
+		values (#{id,jdbcType=DECIMAL}, #{type,jdbcType=VARCHAR},
+		#{description,jdbcType=VARCHAR},
+		#{id,jdbcType=DECIMAL})
+	</insert>
+	-->
+</mapper>

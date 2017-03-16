@@ -22,6 +22,8 @@
 
     <jpa:repositories base-package="com.demo.idea16" transaction-manager-ref="transactionManager"
                       entity-manager-factory-ref="emf"/>
+    <jpa:repositories base-package="com.wjxinfo" transaction-manager-ref="transactionManager"
+                      entity-manager-factory-ref="emf"/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="emf"/>
@@ -44,6 +46,9 @@
         </property>
         <property name="packagesToScan">
             <list>
+                <value>com.wjxinfo.core.base.model</value>
+                <value>com.wjxinfo.core.auth.model</value>
+                <value>com.wjxinfo.common</value>
                 <value>com.demo.idea16</value>
             </list>
 

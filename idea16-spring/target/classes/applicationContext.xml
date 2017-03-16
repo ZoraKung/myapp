@@ -11,16 +11,12 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--<context:property-placeholder location="classpath:system.properties"/>-->
-    <!--<import resource="classpath*:applicationContext-env.xml"/>-->
-    <!--<context:component-scan base-package="com">-->
-    <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
-    <!--</context:component-scan>-->
     <import resource="classpath*:applicationContext-env.xml"/>
     <context:annotation-config/>
 
     <beans:import resource="classpath*:applicationContext-database.xml"/>
-    <!--<beans:import resource="classpath*:cache/applicationContext-ehcache.xml"/>-->
+    <beans:import resource="classpath*:cache/applicationContext-ehcache.xml"/>
+    <beans:import resource="classpath*:applicationContext-sql.xml"/>
     <!--<beans:import resource="classpath*:applicationContext-dts.xml"/>-->
 
     <!-- JSR-303 support will be detected on classpath and enabled automatically -->

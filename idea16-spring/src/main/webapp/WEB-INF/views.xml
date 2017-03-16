@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <bean id="excelView" class="com.wjxinfo.core.base.web.view.ExcelView"/>
+    <!--<bean id="xssfExcelView" class="org.hksi.shared.base.web.view.XSSFExcelView"/>-->
+    <bean id="xssfExcelView" class="com.wjxinfo.core.base.web.view.ExcelXlsxView"/>
+    <bean id="pdfView" class="com.wjxinfo.core.base.web.view.PdfView"/>
+    <bean id="fileView" class="com.wjxinfo.core.base.web.view.FileView"/>
+    <bean id="txtView" class="com.wjxinfo.core.base.web.view.TxtView"/>
+</beans>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+
+    <description>Shiro Configuration</description>
+    <context:component-scan base-package="com.wjxinfo"/>
+
+    <!-- Define Shiro Business Object-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="cacheManager" ref="shiroCacheManager"/>
+        <property name="realms">
+            <list>
+                <ref bean="dbRealm"/>
+                <!--<ref bean="adRealm"/>-->
+            </list>
+        </property>
+    </bean>
+
+    <!-- Project define Realm -->
+    <bean id="dbRealm" class="com.wjxinfo.core.auth.security.SystemRealm" depends-on="userDao,roleDao,privilegeDao">
+        <property name="userManager" ref="userManager"/>
+    </bean>
+
+
+    <!--<bean id="adRealm" class="com.wjxinfo.core.auth.security.MyActiveDirectoryRealm"-->
+          <!--depends-on="userDao,roleDao,privilegeDao">-->
+        <!--<property name="userManager" ref="userManager"/>-->
+        <!--<property name="url" value="${ldap.host}"/>-->
+        <!--<property name="searchBase" value="${ldap.base}"/>-->
+        <!--<property name="systemUsername" value="${ldap.user}"/>-->
+        <!--<property name="systemPassword" value="${ldap.password}"/>-->
+        <!--<property name="principalSuffix" value="${ldap.suffix}"/>-->
+    <!--</bean>-->
+
+    <!--chain-->
+    <bean id="chainDefinitionSectionMetaSource"
+          class="com.wjxinfo.core.auth.security.ChainDefinitionSectionMetaSource"
+          depends-on="resourceDao">
+        <property name="resourceManager" ref="resourceManager"/>
+        <property name="filterChainDefinitions">
+            <value>
+                /favicon.ico = anon
+                /ws/** = anon
+                /static/** = anon
+                /servlet/** = anon
+                /checkCaptcha = anon
+                /login = authc
+                /logout = logout
+            </value>
+        </property>
+    </bean>
+    <!--/** = authc-->
+
+    <!-- Shiro filter -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login"/>
+        <property name="successUrl" value="/"/>
+        <!--<property name="unauthorizedUrl" value="/login"/>-->
+        <property name="filters">
+            <map>
+                <entry key="authc" value-ref="formAuthenticationFilter"/>
+            </map>
+        </property>
+        <property name="filterChainDefinitionMap" ref="chainDefinitionSectionMetaSource"/>
+    </bean>
+
+    <!-- Customer Cache, Use EhCache -->
+    <bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <!--  <property name="cacheManagerConfigFile" value="classpath:security/ehcache-shiro.xml"/>   -->
+        <property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml"/>
+    </bean>
+
+    <!-- LifecycleBeanPostProcessor -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!-- AOP Method -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor">
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
+
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+</beans>

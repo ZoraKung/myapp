@@ -1,4 +1,5 @@
 <%@ taglib prefix="fns" uri="/WEB-INF/tlds/fns.tld" %>
+<%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <%--Set Current Menu Status--%>
 <c:set var="firstMenuId" scope="request"><decorator:getProperty property="meta.firstMenuId"/></c:set>
 <c:set var="firstMenuDesc" scope="request"><decorator:getProperty property="meta.firstMenuDesc"/></c:set>

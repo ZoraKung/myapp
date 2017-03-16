@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	">
+
+    <bean id="sqlDefinition" class="com.wjxinfo.core.base.vo.SqlDefinition">
+        <property name="labelValueSql">
+            <map>
+                <entry key="region_list">
+                    <value><![CDATA[
+            			select region_id as value, region_name as label from t_nip_region where parent_id is null and isnull(delete_flag,0) = 0 order by region_name
+            			]]></value>
+                </entry>
+                <entry key="nip_inst_list">
+                    <value><![CDATA[
+            			SELECT distinct inst_name as label,inst_id AS value FROM dbo.t_nip_institute where
+            			 isnull(delete_flag,0) = 0  order by inst_name
+            			]]></value>
+                </entry>
+
+                <entry key="nip_project_list">
+                    <value><![CDATA[
+            			 SELECT distinct project_name as label,project_id AS value FROM dbo.t_nip_project
+            			 where isnull(delete_flag,0) = 0  order by project_name
+            			]]></value>
+                </entry>
+
+                <entry key="nip_city_list">
+                    <value><![CDATA[
+            			SELECT distinct region_name as label,region_id AS value FROM dbo.t_nip_region
+            			    where level = 2  and isnull(delete_flag,0) = 0  and ( :userId is null or :userId = parent_id ) order by region_name
+            			]]></value>
+                </entry>
+
+                <entry key="nip_designer_list">
+                    <value><![CDATA[
+            			SELECT distinct name as label,designer_id AS value FROM dbo.t_nip_designer
+            			where isnull(delete_flag,0) = 0 order by name
+            			]]></value>
+                </entry>
+
+                <entry key="nip_org_list">
+                    <value><![CDATA[
+            			SELECT distinct org_name as label,org_id AS value FROM dbo.t_nip_org
+            			where isnull(delete_flag,0) = 0 order by org_name
+            			]]></value>
+                </entry>
+
+                <entry key="nip_user">
+                    <value><![CDATA[
+            			select local_user_name as label, id as value from dbo.t_sys_user where isnull(delete_flag,0) = 0 order by id
+            			]]></value>
+                </entry>
+
+                <entry key="nip_director">
+                    <value><![CDATA[
+            			select u.local_user_name as label, u.id as value from dbo.t_sys_user u
+  inner join dbo.t_sys_user_role ur on ur.user_id=u.id and isnull(ur.delete_flag,0)=0
+  inner join dbo.t_sys_role r on ur.role_id=r.id and r.role_name='ROLE_DIRECTOR' and isnull(r.delete_flag,0)=0
+where isnull(u.delete_flag,0) = 0 order by u.id
+            			]]></value>
+                </entry>
+
+                <entry key="mis_role">
+                    <value><![CDATA[
+            			select role_name as label, id as value from dbo.t_sys_role where delete_flag=0 order by role_name
+            			]]></value>
+                </entry>
+                <entry key="scheduled_job">
+                    <value><![CDATA[
+            			select job_name as label, id as value from dbo.t_bas_scheduled_job order by id
+            			]]></value>
+                </entry>
+                <!--<entry key="mis_role">-->
+                <!--<value><![CDATA[-->
+                <!--select role_name as label, id as value from dbo.t_sys_role order by id-->
+                <!--]]></value>-->
+                <!--</entry>-->
+
+
+                <entry key="mis_mail_template">
+                    <value><![CDATA[
+                        select '' as label, '' as value
+                        UNION
+                        select identifier as label, identifier as value from dbo.t_bas_mail_template
+            			]]></value>
+                </entry>
+                <entry key="workflow_next_node">
+                    <value><![CDATA[
+            			select name as label, wf_detail_uid as value from dbo.t_wf_detail order by wf_detail_uid
+            			]]></value>
+                </entry>
+                <entry key="privilege">
+                    <value><![CDATA[
+            			select privilege_identifier as label, privilege_identifier as value from dbo.t_sys_privilege order by privilege_identifier
+            			]]></value>
+                </entry>
+
+                <entry key="table_view_list">
+                    <value><![CDATA[
+                          select distinct table_name as label, table_name as value from information_schema.tables ORDER BY table_name
+            			]]></value>
+                </entry>
+                <entry key="sys_parameter_list">
+                    <value><![CDATA[
+                          select name as label, name as value from dbo.t_hksi_sys_parameter order by seq
+            			]]></value>
+                </entry>
+
+                <!--Add on-->
+                <entry key="ind_membership_type_list">
+                    <value><![CDATA[
+            			SELECT mem_type_edesc AS label, mem_type_id AS VALUE FROM t_member_type WHERE identity_type = 'IND' ORDER BY mem_type_id
+            			]]></value>
+                </entry>
+                <entry key="corp_membership_type_list">
+                    <value><![CDATA[
+            			SELECT mem_type_edesc AS label, mem_type_id AS VALUE FROM t_member_type WHERE identity_type = 'CORP' ORDER BY mem_type_id
+            			]]></value>
+                </entry>
+                <entry key="other_membership_type_list">
+                    <value><![CDATA[
+            			SELECT mem_type_edesc AS label, mem_type_id AS VALUE FROM t_member_type WHERE identity_type = 'OTHER' OR identity_type = 'IND' ORDER BY mem_type_id
+            			]]></value>
+                </entry>
+
+                <entry key="payment_item_list">
+                    <value><![CDATA[
+            			SELECT display_name AS label, id AS VALUE FROM t_payment_item WHERE delete_flag = 0 ORDER BY id
+            			]]></value>
+                </entry>
+
+                <entry key="paper_number_list">
+                    <value>
+                        <![CDATA[
+                            SELECT paper_num AS label, id AS VALUE FROM t_paper WHERE delete_flag = 0 ORDER BY id
+                        ]]>
+                    </value>
+                </entry>
+            </map>
+
+        </property>
+
+        <property name="preDefinedSql">
+            <map>
+                <entry key="misUserLoginNameIsDuplicated">
+                    <value><![CDATA[
+            			select count(*) from (
+            			    select top 1 * from dbo.t_sys_user where local_user_name = '?1' and ( :pkId is null or :pkId != id )
+            			) t0
+            			]]></value>
+                </entry>
+                <entry key="misUserEmailIsDuplicated">
+                    <value><![CDATA[
+            			select count(*) from (
+            			    select top 1 * from dbo.t_sys_user where email = '?1' and ( :pkId is null or :pkId != id )
+            			) t0
+            			]]></value>
+                </entry>
+
+                <entry key="genericMasterIsDuplicated">
+                    <value><![CDATA[
+            			SELECT count(*) FROM (
+            			    SELECT TOP 1 * from dbo.t_bas_master WHERE (:pkId IS NULL OR :pkId != id) AND master_type_id = '?1'
+            			      AND (label = '?2' OR value = '?3')
+                              AND ('?4' = '' or ('?4' !=  ''  and '?4'  = parent_id )))t0
+            			]]></value>
+                </entry>
+
+            </map>
+        </property>
+    </bean>
+</beans>

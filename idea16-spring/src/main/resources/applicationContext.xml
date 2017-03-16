@@ -15,7 +15,8 @@
     <context:annotation-config/>
 
     <beans:import resource="classpath*:applicationContext-database.xml"/>
-    <!--<beans:import resource="classpath*:cache/applicationContext-ehcache.xml"/>-->
+    <beans:import resource="classpath*:cache/applicationContext-ehcache.xml"/>
+    <beans:import resource="classpath*:applicationContext-sql.xml"/>
     <!--<beans:import resource="classpath*:applicationContext-dts.xml"/>-->
 
     <!-- JSR-303 support will be detected on classpath and enabled automatically -->

@@ -1,4 +1,4 @@
-<%@ tag import="com.wjxinfo.core.base.utils.StringUtils" %>
+<%@ tag import="com.wjxinfo.core.base.utils.common.StringUtils" %>
 <%@ tag import="com.wjxinfo.common.master.service.MasterManager" %>
 <%@ tag import="java.util.ArrayList" %>
 <%@ tag import="java.util.List" %>

@@ -1,6 +1,6 @@
 package com.wjxinfo.core.base.web.utils;
 
-import com.wjxinfo.core.base.utils.CollectionHelper;
+import com.wjxinfo.core.base.utils.common.CollectionHelper;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

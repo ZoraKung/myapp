@@ -1,3 +1,4 @@
+<%@ include file="/WEB-INF/common/taglibs.jsp" %>
 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
     <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
         <c:set var="shortcut1" value="${fns:getShortcut(\"MENU_SHORTCUT_1\")}" scope="page"></c:set>

@@ -1,6 +1,6 @@
 package com.wjxinfo.core.base.utils.json;
 
-import com.wjxinfo.core.base.utils.DateUtils;
+import com.wjxinfo.core.base.utils.common.DateUtils;
 import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.DeserializationContext;

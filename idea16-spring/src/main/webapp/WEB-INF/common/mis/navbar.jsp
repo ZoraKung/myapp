@@ -24,7 +24,7 @@
 
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                <%--idea16test<%@include file="/WEB-INF/common/mis/nav-user.jsp" %>--%>
+                <%@include file="/WEB-INF/common/mis/nav-user.jsp" %>
 
             </ul>
             <!-- /.ace-nav -->

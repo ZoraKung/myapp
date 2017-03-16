@@ -3,6 +3,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns:beans="http://www.springframework.org/schema/beans"
              xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:p="http://www.springframework.org/schema/p"
              xsi:schemaLocation="
              http://www.springframework.org/schema/mvc
 	         http://www.springframework.org/schema/mvc/spring-mvc.xsd
@@ -13,7 +14,7 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="com.demo">
+    <context:component-scan base-package="com.demo,com.wjxinfo">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
@@ -24,10 +25,117 @@
         <beans:property name="contentType" value="text/html;charset=UTF-8"/>
     </beans:bean>
 
+    <!-- @ResponseBody -->
+    <beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <beans:property name="messageConverters">
+            <beans:list>
+                <beans:bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <beans:property name="supportedMediaTypes">
+                        <beans:list>
+                            <beans:value>text/plain;charset=UTF-8</beans:value>
+                        </beans:list>
+                    </beans:property>
+                </beans:bean>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="defaultEncoding" value="UTF-8"/>
+        <beans:property name="maxUploadSize" value="32505856"/>
+        <beans:property name="maxInMemorySize" value="4096"/>
+    </beans:bean>
+
+    <beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <beans:property name="basenames">
+            <beans:list>
+                <beans:value>i18n.MessageResource</beans:value>
+            </beans:list>
+        </beans:property>
+        <beans:property name="defaultEncoding" value="UTF-8"/>
+
+    </beans:bean>
+
+    <beans:bean id="localeChangeInterceptor"
+                class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+        <beans:property name="paramName" value="lang" />
+    </beans:bean>
+
+    <beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"
+                p:cookieName="language"
+                p:cookieMaxAge="100000"
+                p:cookiePath="/"
+                p:defaultLocale="zh"/>
+
     <!-- Enables the Spring MVC @Controller programming model -->
     <annotation-driven/>
 
+    <!-- spring context tools -->
+    <beans:bean id="springContextHolder" class="com.wjxinfo.core.base.utils.common.SpringContextHolder" lazy-init="false"/>
+
+    <annotation-driven validator="validator"/>
+
     <!-- default servlet handler -->
     <default-servlet-handler/>
+
+    <!-- Shiro Controller Method AOP -->
+    <beans:bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+                depends-on="lifecycleBeanPostProcessor">
+    </beans:bean>
+
+    <beans:bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <beans:property name="securityManager" ref="securityManager"/>
+    </beans:bean>
+
+    <beans:bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <beans:property name="exceptionMappings">
+            <beans:props>
+                <beans:prop key="org.apache.shiro.authz.UnauthorizedException">error/403</beans:prop>
+            </beans:props>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <beans:property name="order" value="2"/>
+        <beans:property name="location" value="/WEB-INF/views.xml"/>
+    </beans:bean>
+
+    <beans:bean id="viewResolver" class="com.wjxinfo.core.base.web.view.MultiViewResolver">
+        <beans:property name="resolvers">
+            <beans:map>
+                <beans:entry key="jsp">
+                    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                        <beans:property name="prefix" value="/WEB-INF/views/"/>
+                        <beans:property name="suffix" value=".jsp"/>
+                        <beans:property name="order" value="3"/>
+                        <beans:property name="exposedContextBeanNames">
+                            <beans:list>
+                                <beans:value>masterManager</beans:value>
+                                <beans:value>dbUtilsManager</beans:value>
+                            </beans:list>
+                        </beans:property>
+                    </beans:bean>
+                </beans:entry>
+                <beans:entry key="json">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.JsonViewResolver"/>
+                </beans:entry>
+                <beans:entry key="xls">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.ExcelViewResolver"/>
+                </beans:entry>
+                <beans:entry key="xlsx">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.XSSFExcelViewResolver"/>
+                </beans:entry>
+                <beans:entry key="pdf">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.PdfViewResolver"/>
+                </beans:entry>
+                <beans:entry key="file">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.FileViewResolver"/>
+                </beans:entry>
+                <beans:entry key="txt">
+                    <beans:bean class="com.wjxinfo.core.base.web.view.TxtViewResolver"/>
+                </beans:entry>
+            </beans:map>
+        </beans:property>
+    </beans:bean>
 
 </beans:beans>

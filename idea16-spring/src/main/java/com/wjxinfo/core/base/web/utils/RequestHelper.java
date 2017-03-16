@@ -1,6 +1,6 @@
 package com.wjxinfo.core.base.web.utils;
 
-import com.wjxinfo.core.base.utils.StringUtils;
+import com.wjxinfo.core.base.utils.common.StringUtils;
 import com.wjxinfo.core.base.utils.json.ObjectMapper;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
