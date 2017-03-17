@@ -32,31 +32,5 @@
 	<delete id="delete" parameterType="map">
        ${directSql}
  	</delete>
-	
-	<!-- Oracle Stored Procedure -->
-	<!-- 
-	<update id="getLabelValuesByOracleSp" parameterType="map" statementType="CALLABLE">
-		{call UTL.p_get_labelvalue(
-		#{results,mode=OUT,jdbcType=CURSOR,javaType=java.sql.ResultSet,resultMap=LabelValueResultMap}
-		, #{id,jdbcType=VARCHAR}
-		, #{lang,jdbcType=VARCHAR}
-		, #{userid,jdbcType=INTEGER}
-		, #{parent,jdbcType=VARCHAR}
-		)}
-	</update>
-	-->
-	
-	<!-- No need!  instead of JPA -->
-	<!-- 
-	<insert id="insertSystemEventByOracle" parameterType="matrix.core.system.model.SystemEvent">
-		<selectKey resultType="Integer" keyProperty="id" order="BEFORE">
-			SELECT seq_core.nextval FROM dual
-		</selectKey>
-		insert into SYS_EVEN (ID, EVENT_TYPE, EVENT_DESC,
-		CREATION_BY)
-		values (#{id,jdbcType=DECIMAL}, #{type,jdbcType=VARCHAR},
-		#{description,jdbcType=VARCHAR},
-		#{id,jdbcType=DECIMAL})
-	</insert>
-	-->
+
 </mapper>

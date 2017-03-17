@@ -152,10 +152,7 @@ public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>首页</title>\n");
       out.write("</head>\n");
       out.write("<body>\n");
-      out.write('\n');
-      out.write('\n');
-      out.write('\n');
-      out.write('\n');
+      out.write("\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
