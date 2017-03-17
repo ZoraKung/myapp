@@ -6,10 +6,7 @@
     <title>首页</title>
 </head>
 <body>
-<%--<%@include file="idea16/test/nav.jsp" %>--%>
-<%--<%@include file="idea16/test/clock.jsp" %>--%>
-<%--<%@include file="idea16/test/photo.jsp" %>--%>
-<%--<%@include file="idea16/test/photo1.jsp" %>--%>
+
 <%@include file="idea16/test/test.jsp" %>
 
 '${i}'
