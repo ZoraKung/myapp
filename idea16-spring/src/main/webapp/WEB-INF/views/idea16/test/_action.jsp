@@ -11,17 +11,21 @@
 
     $('#btn_query').bind('click', function () {
         var id = $('#testId').val();
-        $.ajax({
-            type: "POST",
-            url: "${ctx}/test/find/" + id,
-            dataType: "json",
-            success: function (res) {
-                $('#testName').val(res.loginName);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                matrix.showError('Error');
-            }
-        });
+        if (id == '' || id == null) {
+            matrix.showError('请输入userId');
+        }else{
+            $.ajax({
+                type: "POST",
+                url: "${ctx}/test/find/" + id,
+                dataType: "json",
+                success: function (res) {
+                    $('#testName').val(res.loginName);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    matrix.showError('Error');
+                }
+            });
+        }
     });
 
 </script>
